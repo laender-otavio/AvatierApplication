@@ -9,6 +9,7 @@ namespace APIAvatier.Infra.Data.IoC
     public static void Register(IServiceCollection services)
     {
       services.AddScoped<IUserRepository, UserRepository>();
+      services.AddScoped<IUserRolesRepository, UserRolesRepository>();
     }
   }
 }

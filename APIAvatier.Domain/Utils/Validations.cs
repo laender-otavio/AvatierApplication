@@ -23,10 +23,17 @@ namespace APIAvatier.Domain.Utils
         return false;
       }
     }
-    public static bool StringValid(string text) 
+    public static bool RoleValid(ref string role)
     {
-      text = text.Trim();
+      if (!StringValid(role))
+        return false;
 
+      role = role.ToUpper().Trim();
+      var validRoles = new List<string> { "ADMIN", "SELLER", "RECEPTIONIST" };
+      return validRoles.Contains(role);
+    }
+    public static bool StringValid(string text)
+    {
       if (string.IsNullOrEmpty(text) || string.IsNullOrWhiteSpace(text))
         return false;
 

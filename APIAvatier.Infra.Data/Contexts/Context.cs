@@ -8,11 +8,13 @@ namespace APIAvatier.Infra.Data.Contexts
   {
     public Context(DbContextOptions<Context> options) : base(options) { }
     public DbSet<User> Users { get; set; }
+    public DbSet<UserRoles> UsersRoles { get; set; }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
       base.OnModelCreating(modelBuilder);
 
       modelBuilder.ApplyConfiguration(new UserMap());
+      modelBuilder.ApplyConfiguration(new UserRolesMap());
     }
   }
 }
