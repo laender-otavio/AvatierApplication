@@ -1,0 +1,32 @@
+﻿using APIAvatier.Domain.DTOs;
+using APIAvatier.Services.DTOs;
+using APIAvatier.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using System.Net;
+
+namespace APIAvatier.API.Controllers
+{
+  public class UsersController : BaseController
+  {
+    private readonly IUserService _service;
+    public UsersController(IUserService service) => _service = service;
+    /// <summary>
+    /// Endpoint that creates new user
+    /// </summary>
+    /// <param name="value"></param>
+    [AllowAnonymous]
+    [HttpPost]
+    public async Task<ActionResult<ResponseHttp>> CreateUser([FromBody] UserDTO value)
+    {
+      try
+      {
+        return GetResult(HttpStatusCode.Created, string.Empty, await _service.Create(value));
+      }
+      catch (Exception ex)
+      {
+        return GetResult(GetStatusCodeByException(ex), ex.Message, ex);
+      }
+    }
+  }
+}

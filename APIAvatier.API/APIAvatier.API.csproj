@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\APIAvatier.Infra.Data\APIAvatier.Infra.Data.csproj" />
+    <ProjectReference Include="..\APIAvatier.Services\APIAvatier.Services.csproj" />
   </ItemGroup>
 
 </Project>

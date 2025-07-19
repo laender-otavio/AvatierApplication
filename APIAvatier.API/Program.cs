@@ -1,5 +1,6 @@
 using APIAvatier.Infra.Data.Contexts;
 using APIAvatier.Infra.Data.IoC;
+using APIAvatier.Services.IoC;
 using Microsoft.EntityFrameworkCore;
 
 namespace APIAvatier.API
@@ -10,7 +11,8 @@ namespace APIAvatier.API
     {
       var builder = WebApplication.CreateBuilder(args);
 
-      Injection.Registrar(builder.Services);
+      InfraInjection.Register(builder.Services);
+      ServiceInjection.Register(builder.Services);
 
       builder.Services.AddEndpointsApiExplorer();
 

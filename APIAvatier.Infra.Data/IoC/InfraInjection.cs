@@ -4,9 +4,9 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace APIAvatier.Infra.Data.IoC
 {
-  public class Injection
+  public class InfraInjection
   {
-    public static void Registrar(IServiceCollection services)
+    public static void Register(IServiceCollection services)
     {
       services.AddScoped<IUserRepository, UserRepository>();
     }
