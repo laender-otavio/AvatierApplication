@@ -8,10 +8,14 @@ namespace APIAvatier.Domain.Utils
     {
       try
       {
-        if (!StringValid(email))
+        if (!StringValid(email, 6, 100))
           return false;
 
         var mailAddress = new MailAddress(email);
+
+        if (!mailAddress.Host.Contains('.'))
+          return false;
+
         return mailAddress.Address == email;
       }
       catch (FormatException)

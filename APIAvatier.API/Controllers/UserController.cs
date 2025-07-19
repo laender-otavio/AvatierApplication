@@ -7,10 +7,11 @@ using System.Net;
 
 namespace APIAvatier.API.Controllers
 {
-  public class UsersController : BaseController
+  [Route("api/users")]
+  public class UserController : BaseController
   {
     private readonly IUserService _service;
-    public UsersController(IUserService service) => _service = service;
+    public UserController(IUserService service) => _service = service;
     /// <summary>
     /// Endpoint that creates new user
     /// </summary>

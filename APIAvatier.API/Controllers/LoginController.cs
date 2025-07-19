@@ -6,12 +6,13 @@ using System.Net;
 
 namespace APIAvatier.API.Controllers
 {
+  [Route("api/login")]
   public class LoginController : BaseController
   {
     private readonly ILoginService _service;
     public LoginController(ILoginService service) => _service = service;
     /// <summary>
-    /// Endpoint that creates new user
+    /// Endpoint that logs in
     /// </summary>
     [AllowAnonymous]
     [HttpPost]

@@ -19,6 +19,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Services", "2 - Service
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIAvatier.Services", "APIAvatier.Services\APIAvatier.Services.csproj", "{5E310DA2-9B4D-4851-94F6-24CD9348E41A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Tests", "5 - Tests", "{E249C8AA-6F5B-491E-948C-04F79330B74C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIAvatier.Test", "APIAvatier.Test\APIAvatier.Test.csproj", "{FC78611F-42CF-441F-926B-6E5DD1C703FE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +45,10 @@ Global
 		{5E310DA2-9B4D-4851-94F6-24CD9348E41A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E310DA2-9B4D-4851-94F6-24CD9348E41A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E310DA2-9B4D-4851-94F6-24CD9348E41A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC78611F-42CF-441F-926B-6E5DD1C703FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC78611F-42CF-441F-926B-6E5DD1C703FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC78611F-42CF-441F-926B-6E5DD1C703FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC78611F-42CF-441F-926B-6E5DD1C703FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +58,7 @@ Global
 		{1EAF5A91-1DA0-4B9E-90A4-BBE646FB5B79} = {10BED628-B0A2-4272-8C43-0EB578A2032B}
 		{89A0D445-406B-4E6A-9B84-71D2F4959F7E} = {07A46222-A71B-4BEA-8C89-EEC9E389A9C9}
 		{5E310DA2-9B4D-4851-94F6-24CD9348E41A} = {20044D61-FDE3-40AB-8F8C-2F1EDDDF3622}
+		{FC78611F-42CF-441F-926B-6E5DD1C703FE} = {E249C8AA-6F5B-491E-948C-04F79330B74C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B3FD70D9-5869-4968-BE6F-84383F5FF6C5}
