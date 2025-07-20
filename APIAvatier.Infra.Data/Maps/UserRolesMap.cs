@@ -18,7 +18,9 @@ namespace APIAvatier.Infra.Data.Maps
       builder.Property(x => x.UserId).IsRequired().HasColumnName("UserId").HasColumnType("int");
       builder.Property(x => x.Role).IsRequired().HasColumnName("Role").HasColumnType("varchar(12)").HasMaxLength(12);
 
-      builder.HasOne(ur => ur.User).WithMany(u => u.UserRoles).HasForeignKey(ur => ur.UserId);
+      builder.HasOne(ur => ur.User)
+        .WithMany(u => u.UserRoles)
+        .HasForeignKey(ur => ur.UserId);
     }
   }
 }

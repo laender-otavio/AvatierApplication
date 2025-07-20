@@ -3,7 +3,6 @@ using APIAvatier.Services.DTOs;
 using APIAvatier.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json.Linq;
 using System.Net;
 
 namespace APIAvatier.API.Controllers

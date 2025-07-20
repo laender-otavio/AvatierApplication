@@ -19,7 +19,10 @@ namespace APIAvatier.Infra.Data.Maps
       builder.Property(x => x.Password).IsRequired().HasColumnName("Password").HasColumnType("varchar(100)").HasMaxLength(100);
       builder.Property(x => x.Email).IsRequired().HasColumnName("Email").HasColumnType("varchar(100)").HasMaxLength(100);
 
-      builder.HasMany(u => u.UserRoles).WithOne(ur => ur.User).HasForeignKey(ur => ur.UserId).OnDelete(DeleteBehavior.Cascade); 
+      builder.HasMany(u => u.UserRoles)
+        .WithOne(ur => ur.User)
+        .HasForeignKey(ur => ur.UserId)
+        .OnDelete(DeleteBehavior.Cascade);
     }
   }
 }

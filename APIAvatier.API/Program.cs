@@ -20,10 +20,10 @@ namespace APIAvatier.API
 
       builder.Services.AddDbContext<Context>(options => options.UseInMemoryDatabase("AvatierDB"));
 
-      builder.Services.AddControllers()
-        .AddNewtonsoftJson(
-            options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
-          );
+      builder
+        .Services
+        .AddControllers()
+        .AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 
       var app = builder.Build();
 
