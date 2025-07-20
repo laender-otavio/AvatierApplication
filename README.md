@@ -6,3 +6,4 @@ Project for Avatier
 * There is only 3 accepted roles: "ADMIN", "SELLER", "RECEPTIONIST".
 * The name, password and email fields were created with a 100 character limit, so this will be validated.
 * The email should have between 6 and 100 characters and at least one "." to be valid
+* Related to tests, there is a Solution Folder called "5 - Tests" with a solution inside using xUnit, you can right click on it and select "Execute tests"
