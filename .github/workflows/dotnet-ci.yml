@@ -30,4 +30,4 @@ jobs:
       run: dotnet build ${{ env.SOLUTION_FILE }} --configuration Release --no-restore
 
     - name: Run Tests
-      run: dotnet test ${{ env.SOLUTION_FILE }} --no-build --verbosity normal
+      run: dotnet test ${{ env.SOLUTION_FILE }} --no-build --configuration Release --verbosity normal
